@@ -22,6 +22,11 @@
   </div>
 
   <div>
+    <%= form.label :planet_id, "Planeta", style: "display: block" %>
+    <%= form.collection_select :planet_id, Planet.all, :id, :name, prompt: "Selecione um planeta" %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
